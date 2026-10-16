@@ -41,9 +41,25 @@
             Console.WriteLine($"A negatív számok db:{db}");
         }
 
+        static void EldontesTetel()
+        {
+            int i = 0;
+            while (i<tomb.Length && tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("van 0 a tömbben.");
+            }
+        }
+
         static void Main(string[] args)
         {
             Feltolt();
+            OsszegzesTetele();
+            MegszamlalasTerele();
+            EldontesTetel();
         }
     }
 }
