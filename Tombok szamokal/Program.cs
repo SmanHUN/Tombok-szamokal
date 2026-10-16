@@ -52,8 +52,41 @@
             {
                 Console.WriteLine("van 0 a tömbben.");
             }
+            else
+            {
+                Console.WriteLine("nincs a tömbe");
+            }
         }
 
+        static void keresesTetel()
+        {
+            int kerses = 0;
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != kerses)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine($"A keresett szám az {i}. indexen található");
+
+            }
+            else
+            {
+                Console.WriteLine($"A keresett szám nincs a tömben");
+            }
+        }
+
+        static void Kivalasztas()
+        {
+            tomb[8] = 10;
+            int i = 0;
+            while (tomb[i] != 10)
+            {
+                i++;
+            }
+            Console.WriteLine($"A keresett szám az {i + 1}. helyen található.");
+         }
         static void Main(string[] args)
         {
             Feltolt();
